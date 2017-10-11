@@ -1,0 +1,89 @@
+<settings>
+	
+    <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+<!--             <listEntry value="0x555555">@Strings.ColorDarkGray</listEntry> -->
+<!--             <listEntry value="0x00AA00">@Strings.ColorDarkGreen</listEntry> -->
+<!--             <listEntry value="0xAA0000">@Strings.ColorDarkRed</listEntry> -->
+<!--             <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry> -->
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ForegroundColor" title="@Strings.ForegroundColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x00AAFF">@Strings.ColorBlue</listEntry>
+            <listEntry value="0x0000FF">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="0x555555">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
+            <listEntry value="0x00FF00">@Strings.ColorGreen</listEntry>
+            <listEntry value="0x00AA00">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="0xFF5500">@Strings.ColorOrange</listEntry>
+            <listEntry value="0xFF00FF">@Strings.ColorPink</listEntry>
+            <listEntry value="0xAA00FF">@Strings.ColorPurple</listEntry>
+            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
+            <listEntry value="0xAA0000">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="0xFFAA00">@Strings.ColorYellow</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.SecondaryForegroundColor" title="@Strings.SecondaryForegroundColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0x000000">@Strings.ColorBlack</listEntry>
+            <listEntry value="0x00AAFF">@Strings.ColorBlue</listEntry>
+            <listEntry value="0x0000FF">@Strings.ColorDarkBlue</listEntry>
+            <listEntry value="0x555555">@Strings.ColorDarkGray</listEntry>
+            <listEntry value="0xAAAAAA">@Strings.ColorLightGray</listEntry>
+            <listEntry value="0x00FF00">@Strings.ColorGreen</listEntry>
+            <listEntry value="0x00AA00">@Strings.ColorDarkGreen</listEntry>
+            <listEntry value="0xFF5500">@Strings.ColorOrange</listEntry>
+            <listEntry value="0xFF00FF">@Strings.ColorPink</listEntry>
+            <listEntry value="0xAA00FF">@Strings.ColorPurple</listEntry>
+            <listEntry value="0xFF0000">@Strings.ColorRed</listEntry>
+            <listEntry value="0xAA0000">@Strings.ColorDarkRed</listEntry>
+            <listEntry value="0xFFAA00">@Strings.ColorYellow</listEntry>
+            <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.UseMilitaryFormat" title="@Strings.MilitaryFormatTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    
+    <setting propertyKey="@Properties.BlinkTimeSeparator" title="@Strings.BlinkTimeSeparatorTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    
+    <setting propertyKey="@Properties.StatusVisibility" title="@Strings.StatusVisibilityTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ShowAll</listEntry>
+            <listEntry value="1">@Strings.StatusVisibilityHideBothBatteryAndConnection</listEntry>
+            <listEntry value="2">@Strings.StatusVisibilityHideOnlyBattery</listEntry>
+            <listEntry value="3">@Strings.StatusVisibilityHideOnlyConnection</listEntry>
+            <listEntry value="4">@Strings.StatusVisibilityHideOnlyBatteryPercentage</listEntry>
+            <listEntry value="5">@Strings.StatusVisibilityHideBothBatteryPercentageAndConnection</listEntry>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.StepsVisibility" title="@Strings.StepsVisibilityTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ShowAll</listEntry>
+            <listEntry value="1">@Strings.StepsVisibilityHideBothCurrentStepsAndProgress</listEntry>
+            <listEntry value="2">@Strings.StepsVisibilityHideOnlyCurrentSteps</listEntry>
+            <listEntry value="3">@Strings.StepsVisibilityHideOnlyProgress</listEntry>
+        </settingConfig>
+    </setting>
+    
+    <setting propertyKey="@Properties.NotifyAlarmVisibility" title="@Strings.NotifyAlarmVisibilityTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ShowAll</listEntry>
+            <listEntry value="1">@Strings.NotifyAlarmVisibilityHideBothNotifyAndAlarm</listEntry>
+            <listEntry value="2">@Strings.NotifyAlarmVisibilityHideOnlyNotify</listEntry>
+            <listEntry value="3">@Strings.NotifyAlarmVisibilityHideOnlyAlarm</listEntry>
+        </settingConfig>
+    </setting>
+
+</settings>

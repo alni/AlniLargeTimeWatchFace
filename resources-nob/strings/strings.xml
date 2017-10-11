@@ -1,0 +1,70 @@
+<strings>
+
+    <string id="AppName">AlniLargeTimeWatchFace</string>
+
+    <string id="BackgroundColorTitle">Bakgrunnsfarge</string>
+    <string id="ForegroundColorTitle">Tekstfarge</string>
+    <string id="SecondaryForegroundColorTitle">Tilleggstekstfarge</string>
+    <string id="MilitaryFormatTitle">Militært format for 24-timers klokke</string>
+    <string id="BlinkTimeSeparatorTitle">Blink tidsdeleren</string>
+    <string id="StatusVisibilityTitle">Status symboler og tekst</string>
+    <string id="StepsVisibilityTitle">Nåværende skritt og skritt-mål</string>
+    <string id="NotifyAlarmVisibilityTitle">Varlser og alarmer</string>
+
+    <string id="ColorBlack">Sort</string>
+    <string id="ColorDarkBlue">Mørkblå</string>
+    <string id="ColorDarkGray">Mørkgrå</string>
+    <string id="ColorDarkGreen">Mørkgrønn</string>
+    <string id="ColorDarkPurple">Mørklilla</string>
+    <string id="ColorDarkRed">Mørkrød</string>
+    <string id="ColorDarkYellow">Mørkgul</string>
+    <string id="ColorLightGray">Lysgrå</string>
+    <string id="ColorWhite">Hvit</string>
+    <string id="ColorBlue">Blå</string>
+    <string id="ColorGreen">Grønn</string>
+    <string id="ColorOrange">Orange</string>
+    <string id="ColorPink">Rosa</string>
+    <string id="ColorPurple">Lilla</string>
+    <string id="ColorRed">Rød</string>
+    <string id="ColorYellow">Gul</string>
+    
+    <string id="ShowAll">Vis alt</string>
+    
+    
+    <string id="WeekDay_1">Søn</string>
+    <string id="WeekDay_2">Man</string>
+    <string id="WeekDay_3">Tir</string>
+    <string id="WeekDay_4">Ons</string>
+    <string id="WeekDay_5">Tor</string>
+    <string id="WeekDay_6">Fre</string>
+    <string id="WeekDay_7">Lør</string>
+    
+    <string id="Month_1">Jan</string>
+    <string id="Month_2">Feb</string>
+    <string id="Month_3">Mar</string>
+    <string id="Month_4">Apr</string>
+    <string id="Month_5">Mai</string>
+    <string id="Month_6">Jun</string>
+    <string id="Month_7">Jul</string>
+    <string id="Month_8">Aug</string>
+    <string id="Month_9">Sep</string>
+    <string id="Month_10">Okt</string>
+    <string id="Month_11">Nov</string>
+    <string id="Month_12">Des</string>
+    
+    
+    <string id="StatusVisibilityHideBothBatteryAndConnection">Skjul både batteri og tilkobling info</string>
+    <string id="StatusVisibilityHideOnlyBattery">Skjul bare batteri info</string>
+    <string id="StatusVisibilityHideOnlyConnection">Skjul bare tilkobling info</string>
+    <string id="StatusVisibilityHideOnlyBatteryPercentage">Skjul bare batteri prosent</string>
+    <string id="StatusVisibilityHideBothBatteryPercentageAndConnection">Skjul både batteri prosent og tilkobling info</string>
+    
+    <string id="StepsVisibilityHideBothCurrentStepsAndProgress">Skjul all skritt info</string>
+    <string id="StepsVisibilityHideOnlyCurrentSteps">Skjul bare nåværende skritt</string>
+    <string id="StepsVisibilityHideOnlyProgress">Skjul bare skritt-mål progresjon</string>
+    
+    <string id="NotifyAlarmVisibilityHideBothNotifyAndAlarm">Skjul både varsel og alarm info</string>
+    <string id="NotifyAlarmVisibilityHideOnlyNotify">Skjul bare varsel info</string>
+    <string id="NotifyAlarmVisibilityHideOnlyAlarm">Skjul bare alarm info</string>
+
+</strings>

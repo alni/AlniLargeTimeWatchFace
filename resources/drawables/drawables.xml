@@ -1,0 +1,6 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    
+    <bitmap id="EmptyBitmap" filename="empty.png" />
+    <bitmap id="RunBitmap" filename="ic_directions_run_24px.png" />
+</drawables>

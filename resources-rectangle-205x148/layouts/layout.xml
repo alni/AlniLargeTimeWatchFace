@@ -1,0 +1,48 @@
+<layout id="WatchFace">
+    <drawable class="Background" />
+
+    <!-- Status/Top section -->
+    <!-- Left-hand status icons -->
+    <label id="BatteryImageLabel" text="@Strings.fa_battery_2" font="Rez.Fonts.FontAwesome" x="3" y="1" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="BatteryLabel" x="32" y="2" text="100%" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GRAY" />
+    <label id="PhoneConnectedImageLabel" text="@Strings.fa_bluetooth_b" font="Rez.Fonts.FontAwesome" x="68" y="1" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
+
+    <!-- Bottom section -->
+    <label id="NotificationImageLabel" text="@Strings.fa_comment_o" font="Rez.Fonts.FontAwesome" x="110" y="0" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="NotificationLabel" x="136" y="2" text="17" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GRAY" />
+    <label id="AlarmImageLabel" text="@Strings.fa_bell_o" font="Rez.Fonts.FontAwesome" x="178" y="1" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="AlarmLabel" x="195" y="2" text="2" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GRAY" />
+
+    <!-- Right-hand activity monitoring -->
+    <drawable id="StepsGoal" class="ProgressBar">
+		<param name="locX">0</param>
+		<param name="locY">47</param>
+		<param name="height">2</param>
+		<param name="width">205</param>
+		<param name="color">Gfx.COLOR_LT_GRAY</param>
+	</drawable>
+    <label id="StepsLabel" x="173" y="25" text="1000" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+    <bitmap id="StepsImage" filename="../drawables/ic_directions_run_24px.png" x="181" y="25" />
+
+<!--     <label id="StepsLabel2" x="173" y="26" text="1000000" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" /> -->
+
+    <!-- Middle Main Content -->
+    <!-- Large centered digital clock -->
+    <label id="TimeAmPmLabel" x="188" y="62" text="p" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+    <label id="TimeAmPmMLabel" x="189" y="81" text="m" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+
+    <label id="TimeLabel" x="center" y="50" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+
+    <!-- Date section below clock -->
+    <label id="TimeHourLabel" x="96" y="50" text="12" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+    <label id="TimeMinuteLabel" x="108" y="50" text="50" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+
+<!--     <label id="Time2Label" x="center" y="50" text="00:08" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" /> -->
+
+    <!-- Current Week Day label (just Left of centered date label) -->
+    <label id="WeekDayLabel" x="85" y="120" text="Tor" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+    <!-- Centered current date label (day of month) -->
+    <label id="DateLabel" x="center" y="117" text="29" font="Gfx.FONT_NUMBER_MILD" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
+    <!-- Current month name label (just right of centered date label) -->
+    <label id="MonthLabel" x="120" y="120" text="Des" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+</layout>

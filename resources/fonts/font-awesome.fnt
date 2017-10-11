@@ -1,0 +1,15 @@
+info face="FontAwesome" size=18 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=18 base=15 scaleW=256 scaleH=256 pages=1 packed=0 alphaChnl=0 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="font-awesome_0.png"
+chars count=11
+char id=61602 x=151   y=0     width=18    height=18    xoffset=0     yoffset=0     xadvance=18    page=0  chnl=15
+char id=61669 x=130   y=0     width=20    height=18    xoffset=-1    yoffset=0     xadvance=18    page=0  chnl=15
+char id=61872 x=170   y=0     width=18    height=18    xoffset=-1    yoffset=0     xadvance=17    page=0  chnl=15
+char id=61883 x=189   y=0     width=16    height=18    xoffset=0     yoffset=0     xadvance=15    page=0  chnl=15
+char id=62016 x=0     y=0     width=25    height=18    xoffset=-1    yoffset=0     xadvance=23    page=0  chnl=15
+char id=62017 x=26    y=0     width=25    height=18    xoffset=-1    yoffset=0     xadvance=23    page=0  chnl=15
+char id=62018 x=52    y=0     width=25    height=18    xoffset=-1    yoffset=0     xadvance=23    page=0  chnl=15
+char id=62019 x=78    y=0     width=25    height=18    xoffset=-1    yoffset=0     xadvance=23    page=0  chnl=15
+char id=62020 x=104   y=0     width=25    height=18    xoffset=-1    yoffset=0     xadvance=23    page=0  chnl=15
+char id=62099 x=206   y=0     width=15    height=18    xoffset=0     yoffset=0     xadvance=15    page=0  chnl=15
+char id=62100 x=222   y=0     width=10    height=18    xoffset=0     yoffset=0     xadvance=10    page=0  chnl=15

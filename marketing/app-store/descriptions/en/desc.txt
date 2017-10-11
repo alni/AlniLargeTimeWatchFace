@@ -1,0 +1,53 @@
+Large Digital Clock with support for customisation.
+
+* 12h and 24h digital clock supported (including 24h military time)
+* Date translated into many languages
+* Status information for battery level, phone connection
+* Additional information for phone notifications and active alarms
+* Shows current daily activity steps (colour changes when goal is reached)
+
+
+CUSTOMSATION SUPPORT:
+* Main Text Colour ("red" by default)
+* Supplementary Text Colour ("blue" by default")
+* Background Colour ("black" by default") - a small number colours are only available certain devices
+
+
+SUPPORTED LANGUAGES:
+
+Full support (all texts translated):
+
+* English (default)
+* Norwegian Bokmaal
+
+Partial support - date only (other texts in English):
+
+* Croatian
+* Czech
+* Danish
+* Dutch
+* Finnish
+* French
+* German
+* Hungarian
+* Italian
+* Polish
+* Portuguese
+* Slovak
+* Slovenian
+* Spanish
+* Swedish
+
+
+
+CREDITS:
+
+Date Translations:
+
+Used the Moment.js (http://momentjs.com/) JavaScript library as base with the date translations.
+
+
+Icons:
+
+* Most icons based on the Font Awesome (http://fontawesome.io/) project.
+* The activity step icon based on the Material Design Icons (https://material.io/icons/) project.

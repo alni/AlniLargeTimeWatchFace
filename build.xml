@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+     20. des. 2016 13.33.18                                                        
+     
+     # Alni Large Time Watch Face #
+     
+     A Watch Face for Garmin Connect IQ devices.
+                   
+                   
+     by Alexander Nilsen                                                                
+     ====================================================================== -->
+<project name="project" default="default">
+    <description>
+            description
+    </description>
+
+    <!-- ================================= 
+          target: default              
+         ================================= -->
+    <target name="default" depends="depends" description="description">
+        
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: depends                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="depends">
+    </target>
+	
+	<macrodef name="copy_res_folder">
+		<attribute name="dir" />
+		<attribute name="from" />
+		<attribute name="to" />
+		<sequential>
+			<!--<copy todir="@{todir}">-->
+			<copy todir="resources-@{to}/@{dir}">
+				<fileset dir="resources-@{from}/@{dir}">
+					<!-- <exclude name='**/*svn' /> -->
+				</fileset>
+			</copy>
+		</sequential>
+	</macrodef>
+	
+	<macrodef name="copy_launcher_icon">
+		<attribute name="from" default="default" />
+		<attribute name="to-device" />
+		<sequential>
+			<!--<copy todir="@{todir}">-->
+			<copy 
+				todir="resources-@{to-device}/drawables"
+				file="marketing/icons/@{from}/launcher_icon.png">
+			</copy>
+		</sequential>
+	</macrodef>
+	
+	<macrodef name="copy_layouts">
+	  <attribute name="from-device" />
+	  <attribute name="to-device" />
+	  <sequential>
+	  	<copy_res_folder dir="layouts" from="@{from-device}" to="@{to-device}" />
+	  	<!--<copy todir="@{todir}">- ->
+	  	<copy todir="resources-@{to-device}/layouts">
+	      <fileset dir="resources-@{from-device}/layouts">
+	        <!- - <exclude name='**/*svn' /> - ->
+	      </fileset>
+	    </copy>-->
+	  </sequential>
+	</macrodef>
+	
+	<macrodef name="copy_strings">
+	  <attribute name="from" />
+	  <attribute name="to" />
+	  <sequential>
+	  	<!--<copy todir="@{todir}">-->
+	  	<copy todir="resources-@{to}/strings">
+	      <fileset dir="resources-@{from}/strings">
+	        <!-- <exclude name='**/*svn' /> -->
+	      </fileset>
+	    </copy>
+	  </sequential>
+	</macrodef>
+	
+	<macrodef name="copy_color_settings">
+	  <attribute name="colors" />
+	  <attribute name="device" />
+	  <sequential>
+	  	<!--<copy todir="@{todir}">-->
+	  	<copy todir="resources-@{device}/settings">
+	      <fileset dir="resources-@{colors}color/settings">
+	        <!-- <exclude name='**/*svn' /> -->
+	      </fileset>
+	    </copy>
+	  </sequential>
+	</macrodef>
+	
+	<macrodef name="copy_64color_settings">
+	  <!--<attribute name="todir"/>-->
+	  <attribute name="device"/>
+	  <sequential>
+	  	<copy_color_settings colors="64" device="@{device}" />
+	    <!--<copy todir="@{todir}">-
+	    <copy todir="resources-@{device}/settings">
+	      <fileset dir="resources-64color/settings">
+	        <!- <exclude name='**/*svn' /> -
+	      </fileset>
+	    </copy>-->
+	  </sequential>
+	</macrodef>
+	
+	<macrodef name="copy_16color_settings">
+	  <!--<attribute name="todir"/>-->
+	  <attribute name="device"/>
+	  <sequential>
+	  	<copy_color_settings colors="16" device="@{device}" />
+	  	<!--<copy todir="@{todir}">-
+	  	<copy todir="resources-@{device}/settings">
+	      <fileset dir="resources-16color/settings">
+	        <!- <exclude name='**/*svn' /> -
+	      </fileset>
+	    </copy>-->
+	  </sequential>
+	</macrodef>
+	
+	<target name="copy-resources" depends="copy_layouts,copy_16color_settings,copy_64color_settings">
+		<copy_launcher_icon to-device="fenix3" />
+		<copy_launcher_icon to-device="fenix3_hr" />
+		<copy_launcher_icon to-device="d2bravo" />
+		<copy_launcher_icon to-device="d2bravo_titanium" />
+		<copy_launcher_icon to-device="fenixchronos" />
+		<copy_launcher_icon to-device="fr230" />
+		<copy_launcher_icon to-device="fr235" />
+		<copy_launcher_icon to-device="fr630" />
+		<copy_launcher_icon to-device="fr735xt" />
+		
+		<copy_launcher_icon to-device="fr920xt" from="fr920xt" />
+		<copy_launcher_icon to-device="vivoactive" from="vivoactive" />
+		<copy_launcher_icon to-device="vivoactive_hr" from="vivoactive_hr" />
+	</target>
+	
+	<target name="copy-strings">
+		
+	</target>
+	
+	<target name="copy_layouts">
+		<copy_layouts from-device="fr230" to-device="fr235" />
+		<copy_layouts from-device="vivoactive" to-device="epix" />
+		<!--<copy todir="resources-fr235/layouts">
+			<fileset dir="resources-fr230/layouts"></fileset>
+		</copy>
+		
+		<copy todir="resources-epix/layouts">
+			<fileset dir="resources-vivoactive/layouts"></fileset>
+		</copy>-->
+	</target>
+	
+	<target name="copy_16color_settings">
+		<!--<copy_16color_settings todir="resources-fenix3/settings" />
+		<copy_16color_settings todir="resources-fenix3_hr/settings" />
+		<copy_16color_settings todir="resources-d2bravo/settings" />
+		<copy_16color_settings todir="resources-d2bravo_titanium/settings" />
+		<copy_16color_settings todir="resources-fr230/settings" />
+		<copy_16color_settings todir="resources-fr235/settings" />
+		<copy_16color_settings todir="resources-fr630/settings" />
+		<copy_16color_settings todir="resources-fr735xt/settings" />
+		<copy_16color_settings todir="resources-fr920xt/settings" />-->
+		<copy_16color_settings device="fenix3" />
+		<copy_16color_settings device="fenix3_hr" />
+		<copy_16color_settings device="d2bravo" />
+		<copy_16color_settings device="d2bravo_titanium" />
+		<copy_16color_settings device="fr230" />
+		<copy_16color_settings device="fr235" />
+		<copy_16color_settings device="fr630" />
+		<copy_16color_settings device="fr735xt" />
+		<copy_16color_settings device="fr920xt" />
+	</target>
+	
+	<target name="copy_64color_settings">
+		<!--<copy_64color_settings todir="resources-epix/settings" />
+		<copy_64color_settings todir="resources-fenixchronos/settings" />
+		<copy_64color_settings todir="resources-vivoactive/settings" />
+		<copy_64color_settings todir="resources-vivoactive_hr/settings" />-->
+		<copy_64color_settings device="epix" />
+		<copy_64color_settings device="fenixchronos" />
+		<copy_64color_settings device="vivoactive" />
+		<copy_64color_settings device="vivoactive_hr" />
+	</target>
+
+</project>

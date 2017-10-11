@@ -1,0 +1,48 @@
+<strings>
+
+    <string id="AppName">AlniLargeTimeWatchFace</string>
+
+    <string id="BackgroundColorTitle">Background Color</string>
+    <string id="ForegroundColorTitle">Foreground Color</string>
+    <string id="SecondaryForegroundColorTitle">Accent Foreground Color</string>
+    <string id="MilitaryFormatTitle">Military Format for 24 Hour Time</string>
+    <string id="BlinkTimeSeparatorTitle">Blink the Time Separator</string>
+
+    <string id="ColorBlack">Black</string>
+    <string id="ColorDarkBlue">Dark Blue</string>
+    <string id="ColorDarkGray">Dark Gray</string>
+    <string id="ColorDarkGreen">Dark Green</string>
+    <string id="ColorDarkPurple">Dark Purple</string>
+    <string id="ColorDarkRed">Dark Red</string>
+    <string id="ColorDarkYellow">Dark Yellow</string>
+    <string id="ColorLightGray">Light Gray</string>
+    <string id="ColorWhite">White</string>
+    <string id="ColorBlue">Blue</string>
+    <string id="ColorGreen">Green</string>
+    <string id="ColorOrange">Orange</string>
+    <string id="ColorPink">Pink</string>
+    <string id="ColorRed">Red</string>
+    <string id="ColorYellow">Yellow</string>
+    
+    <string id="WeekDay_1">Dom</string>
+    <string id="WeekDay_2">Seg</string>
+    <string id="WeekDay_3">Ter</string>
+    <string id="WeekDay_4">Qua</string>
+    <string id="WeekDay_5">Qui</string>
+    <string id="WeekDay_6">Sex</string>
+    <string id="WeekDay_7">Sáb</string>
+    
+    <string id="Month_1">Jan</string>
+    <string id="Month_2">Fev</string>
+    <string id="Month_3">Mar</string>
+    <string id="Month_4">Abr</string>
+    <string id="Month_5">Mai</string>
+    <string id="Month_6">Jun</string>
+    <string id="Month_7">Jul</string>
+    <string id="Month_8">Ago</string>
+    <string id="Month_9">Set</string>
+    <string id="Month_10">Out</string>
+    <string id="Month_11">Nov</string>
+    <string id="Month_12">Dez</string>
+
+</strings>

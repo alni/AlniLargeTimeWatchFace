@@ -1,0 +1,53 @@
+Stor Digitalklokke med støtte for tilpasning.
+
+* 12t og 24t digitalklokke støttet (inkludert 24t "militært" format)
+* Dato oversatt til flere språk
+* Status informasjon for batteri-nivå, telefonoppkobling
+* Ytterligere informasjon om telefonvarsler og aktive alarmer
+* Vises nåvæerende daglig skritt (endrer farge når målet er nådd)
+
+
+STØTTE FOR TILPASNING:
+* Hovedtekstfarge ("rød" som standard)
+* Tilleggstekstfarge ("blå" som standard)
+* Bakgrunnsfarge ("sort" som standard) - ett lite utvalg av farger er bare tilgengelig på visse enheter
+
+
+STØTTEDE SPRÅK:
+
+Full støtte (all tekst oversatt):
+
+* Engelsk (standard)
+* Norsk Bokmål
+
+Delvis støtte - bare dato (resten på Engelsk):
+
+* Kroatisk
+* Tjekkisk
+* Dansk
+* Nederlandsk
+* Finsk
+* Fransk
+* Tysk
+* Ungarsk
+* Italiensk
+* Polsk
+* Portugisisk
+* Slovakisk
+* Slovensk
+* Spansk
+* Svensk
+
+
+
+ANNERKJENNELSE:
+
+Dato-oversetting:
+
+Har brukt Moment.js (http://momentjs.com/) JavaScript biblioteket som basis med dato-oversettingen.
+
+
+Symboler og ikoner:
+
+* De fleste ikonene og symbolene er basert på Font Awesome (http://fontawesome.io/) prosjektet.
+* Skritt-aktivitets symbolet er basert på ikon fra Material Design Icons (https://material.io/icons/) prosjektet.

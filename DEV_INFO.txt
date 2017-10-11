@@ -1,0 +1,4 @@
+MANIFEST IDS:
+=======================================================================
+- PUBLIC MANIFEST ID : F1F85422334B46EAA0B4F78E7D4041B2
+- BETA MANIFEST ID   : A4322C95266D404CAFD7ED60289FDB52

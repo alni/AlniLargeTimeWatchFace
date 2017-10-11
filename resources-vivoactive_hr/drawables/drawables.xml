@@ -1,0 +1,15 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    
+<!--     <bitmap id="BatteryChargingIcon" filename="battery.png" /> -->
+<!--     <bitmap id="BatteryEmptyIcon" filename="fa-battery-0.png" /> -->
+<!--     <bitmap id="BatteryLowIcon" filename="fa-battery-1.png" /> -->
+<!--     <bitmap id="BatteryMedIcon" filename="fa-battery-2.png" /> -->
+<!--     <bitmap id="BatteryHighIcon" filename="fa-battery-3.png" /> -->
+<!--     <bitmap id="BatteryFullIcon" filename="fa-battery.png" /> -->
+<!--     <bitmap id="PhoneConnectedIcon" filename="fa-bluetooth-b-on.png" /> -->
+<!--     <bitmap id="PhoneConnectedAltIcon" filename="fa-bluetooth-b-on-1.png" /> -->
+<!--     <bitmap id="PhoneDisconnectedIcon" filename="fa-bluetooth-b-off.png" /> -->
+<!--     <bitmap id="NotificationIcon" filename="fa-comment-o.png" /> -->
+<!--     <bitmap id="AlarmIcon" filename="fa-bell-o.png" /> -->
+</drawables>
