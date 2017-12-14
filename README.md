@@ -2,15 +2,18 @@
 
 A Watch Face for Garmin Connect IQ devices.
 
+![](marketing/app-store/main-image.png)
+
 ## Features ##
 
 * Large Digital Clock (both 12 hours and 24 hours supported)
 * Shows the current date in many languages
 * Shows the current battery level (with icon and text)
 * Shows the current phone connection status
-* Shows the current Activity Tracking Steps
+* Shows the current Activity Tracking Steps (including progress line)
 * Shows notification and alarms count
 * Customisable background and foreground colour
+* Customisable visibility of most elements (except time and date)
 
 
 ### Supported devices ###
