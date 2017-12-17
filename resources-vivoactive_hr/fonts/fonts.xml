@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<font id="TimeFont" filename="Teko.fnt" filter="0123456789:"/>
+</resources>
