@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 	<font id="FontAwesome" filename="font-awesome.fnt" antialias="true" />
+	<!-- Only include digits from this large font -->
+	<font id="TimeFont" filename="Teko.fnt" filter="0123456789:"/>
 </resources>
