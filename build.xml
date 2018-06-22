@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- ====================================================================== 
-     20. des. 2016 13.33.18                                                        
+<!-- ======================================================================                                                   
      
      # Alni Large Time Watch Face #
      
@@ -24,9 +23,12 @@
     <!-- - - - - - - - - - - - - - - - - - 
           target: depends                      
          - - - - - - - - - - - - - - - - - -->
-    <target name="depends">
+    <target name="depends" depends="copy-resources">
     </target>
 	
+	<!--
+		[Macro] Copy sub-folder from specific Resource folder to another
+	-->
 	<macrodef name="copy_res_folder">
 		<attribute name="dir" />
 		<attribute name="from" />
@@ -41,6 +43,9 @@
 		</sequential>
 	</macrodef>
 	
+	<!--
+		[Macro] Copy Icon from marketing for specific device
+	-->
 	<macrodef name="copy_launcher_icon">
 		<attribute name="from" default="default" />
 		<attribute name="to-device" />
@@ -53,6 +58,9 @@
 		</sequential>
 	</macrodef>
 	
+	<!--
+		[Macro] Copy Layout Resources from one device to another
+	-->
 	<macrodef name="copy_layouts">
 	  <attribute name="from-device" />
 	  <attribute name="to-device" />
@@ -67,6 +75,9 @@
 	  </sequential>
 	</macrodef>
 	
+	<!--
+		[Macro] Copy String Resources from one folder to another
+	-->
 	<macrodef name="copy_strings">
 	  <attribute name="from" />
 	  <attribute name="to" />
@@ -80,6 +91,9 @@
 	  </sequential>
 	</macrodef>
 	
+	<!--
+		[Macro] Copy Color Settings from custom base folder to specific device
+	-->
 	<macrodef name="copy_color_settings">
 	  <attribute name="colors" />
 	  <attribute name="device" />
@@ -93,6 +107,9 @@
 	  </sequential>
 	</macrodef>
 	
+	<!--
+		[Macro] Copy 64 Color Settings from custom base folder to specific device
+	-->
 	<macrodef name="copy_64color_settings">
 	  <!--<attribute name="todir"/>-->
 	  <attribute name="device"/>
@@ -107,6 +124,9 @@
 	  </sequential>
 	</macrodef>
 	
+	<!--
+		[Macro] Copy 16 Color Settings from custom base folder to specific device
+	-->
 	<macrodef name="copy_16color_settings">
 	  <!--<attribute name="todir"/>-->
 	  <attribute name="device"/>
@@ -121,6 +141,10 @@
 	  </sequential>
 	</macrodef>
 	
+	<!--
+		Copy all shared/common resources from similar devices (including icons,
+		layouts, color settings...)
+	-->
 	<target name="copy-resources" depends="copy_layouts,copy_16color_settings,copy_64color_settings">
 		<copy_launcher_icon to-device="fenix3" />
 		<copy_launcher_icon to-device="fenix3_hr" />
@@ -141,6 +165,9 @@
 		
 	</target>
 	
+	<!--
+		Copy shared layout resources from similar devices
+	-->
 	<target name="copy_layouts">
 		<copy_layouts from-device="fr230" to-device="fr235" />
 		<copy_layouts from-device="vivoactive" to-device="epix" />
@@ -153,6 +180,9 @@
 		</copy>-->
 	</target>
 	
+	<!--
+		Copy shared 16 color settings to supported devices
+	-->
 	<target name="copy_16color_settings">
 		<!--<copy_16color_settings todir="resources-fenix3/settings" />
 		<copy_16color_settings todir="resources-fenix3_hr/settings" />
@@ -174,6 +204,9 @@
 		<copy_16color_settings device="fr920xt" />
 	</target>
 	
+	<!--
+		Copy shared 64 color settings to supported devices
+	-->
 	<target name="copy_64color_settings">
 		<!--<copy_64color_settings todir="resources-epix/settings" />
 		<copy_64color_settings todir="resources-fenixchronos/settings" />
@@ -183,6 +216,7 @@
 		<copy_64color_settings device="fenixchronos" />
 		<copy_64color_settings device="vivoactive" />
 		<copy_64color_settings device="vivoactive_hr" />
+		<copy_64color_settings device="vivoactive3" />
 	</target>
 
 </project>
