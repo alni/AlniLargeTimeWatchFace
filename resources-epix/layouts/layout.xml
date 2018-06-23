@@ -3,14 +3,14 @@
 
     <!-- Status/Top section -->
     <!-- Left-hand status icons -->
-    <label id="BatteryImageLabel" text="@Strings.fa_battery_2" font="Rez.Fonts.FontAwesome" x="3" y="1" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="BatteryImageLabel" text="@Strings.fa_battery_2" font="@Fonts.FontAwesome" x="3" y="1" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
     <label id="BatteryLabel" x="32" y="0" text="100%" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GRAY" />
-    <label id="PhoneConnectedImageLabel" text="@Strings.fa_bluetooth_b" font="Rez.Fonts.FontAwesome" x="68" y="1" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="PhoneConnectedImageLabel" text="@Strings.fa_bluetooth_b" font="@Fonts.FontAwesome" x="68" y="1" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
 
     <!-- Bottom section -->
-    <label id="NotificationImageLabel" text="@Strings.fa_comment_o" font="Rez.Fonts.FontAwesome" x="110" y="0" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="NotificationImageLabel" text="@Strings.fa_comment_o" font="@Fonts.FontAwesome" x="110" y="0" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
     <label id="NotificationLabel" x="136" y="0" text="17" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GRAY" />
-    <label id="AlarmImageLabel" text="@Strings.fa_bell_o" font="Rez.Fonts.FontAwesome" x="178" y="1" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="AlarmImageLabel" text="@Strings.fa_bell_o" font="@Fonts.FontAwesome" x="178" y="1" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GREEN" />
     <label id="AlarmLabel" x="195" y="0" text="2" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GRAY" />
 
     <!-- Right-hand activity monitoring -->
@@ -27,21 +27,37 @@
 
     <!-- Middle Main Content -->
     <!-- Large centered digital clock -->
-    <label id="TimeAmPmLabel" x="178" y="56" text="p" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
-    <label id="TimeAmPmMLabel" x="179" y="77" text="m" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+<!--     <label id="TimeAmPmLabel" x="178" y="56" text="p" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" /> -->
+<!--     <label id="TimeAmPmMLabel" x="179" y="77" text="m" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" /> -->
 
-    <label id="TimeLabel" x="center" y="50" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+<!--     <label id="TimeLabel" x="center" y="50" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" /> -->
 
-    <!-- Date section below clock -->
-    <label id="TimeHourLabel" x="96" y="50" text="12" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
-    <label id="TimeMinuteLabel" x="107" y="50" text="50" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+<!--     <label id="TimeHourLabel" x="96" y="50" text="12" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" /> -->
+<!--     <label id="TimeMinuteLabel" x="107" y="50" text="50" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" /> -->
+
+	<label id="TimeAmPmLabel" x="190" y="56" text="p" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+    <label id="TimeAmPmMLabel" x="191" y="77" text="m" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+
+    <label id="TimeLabel" x="center" y="26" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+
+    <label id="TimeHourLabel" x="95" y="26" text="12" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+    <label id="TimeMinuteLabel" x="109" y="26" text="50" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+    
+<!--     <label id="TimeMinuteLabel2" x="109" y="26" text="34" font="Rez.Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_RED" /> -->
 
 <!--     <label id="Time2Label" x="center" y="50" text="00:08" font="Gfx.FONT_NUMBER_THAI_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" /> -->
 
-    <!-- Current Week Day label (just Left of centered date label) -->
-    <label id="WeekDayLabel" x="85" y="115" text="Tor" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+	<!-- Date section below clock -->
+	<!-- Current Week Day label (just Left of centered date label) -->
+    <label id="WeekDayLabel" x="85" y="122" text="Tor" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
     <!-- Centered current date label (day of month) -->
-    <label id="DateLabel" x="center" y="117" text="29" font="Gfx.FONT_NUMBER_MILD" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
+    <label id="DateLabel" x="center" y="124" text="29" font="Gfx.FONT_NUMBER_MILD" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
     <!-- Current month name label (just right of centered date label) -->
-    <label id="MonthLabel" x="120" y="115" text="Des" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+    <label id="MonthLabel" x="120" y="122" text="Des" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+<!--     Current Week Day label (just Left of centered date label) -->
+<!--     <label id="WeekDayLabel" x="85" y="115" text="Tor" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" /> -->
+<!--     Centered current date label (day of month) -->
+<!--     <label id="DateLabel" x="center" y="117" text="29" font="Gfx.FONT_NUMBER_MILD" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" /> -->
+<!--     Current month name label (just right of centered date label) -->
+<!--     <label id="MonthLabel" x="120" y="115" text="Des" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" /> -->
 </layout>
