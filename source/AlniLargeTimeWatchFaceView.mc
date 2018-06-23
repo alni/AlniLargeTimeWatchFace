@@ -67,6 +67,13 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 	hidden var stepsState = SHOW_ALL;
 	hidden var notifyAlarmState = SHOW_ALL;
 
+
+	hidden var todayInfo = null;
+	hidden var batteryPercentage = 0.0;
+	hidden var batteryIconValue = null;
+	hidden var currentSteps = 0.0f;
+	hidden var stepsGoal = 100000.0f; // High default value to prevent dividing by 0
+
     function initialize() {
         WatchFace.initialize();
         stepsLabelStringRes = Ui.loadResource(Rez.Strings.StepsLabel);
@@ -82,12 +89,14 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
     // loading resources into memory.
     function onShow() {
     	self.updateVariables();
+    	self.updateExtraInfoVars();
     }
 
     // Update the view
     function onUpdate(dc) {
     	if (AlniLargeTimeWatchFaceApp.settingsChanged) {
 	    	self.updateVariables();
+	    	self.updateExtraInfoVars();
 
 	    	AlniLargeTimeWatchFaceApp.resetSettingsChanged();
     	}
@@ -96,7 +105,7 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 		// Update the time information
         self.updateTime(deviceSettings);
 
-		if (self.isInLowPowerMode || self.uiUpdateNeeded) {
+		if (self.isInLowPowerMode || self.uiUpdateNeeded || Globals.IS_ALWAYS_ACTIVE) {
 			// Only update extra information if in Low Power Mode (slow update)
 			// OR when the UI needs updating (changed to/from Low Power Mode)
 			self.updateExtraInfo(deviceSettings);
@@ -202,8 +211,9 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 			// Set the Minutes label to the current minutes
 			timeMinuteView.setText(minutes);
 			// Set the default Time label as the hours and minutes separator
-			if (self.blinkTimeSeparator && !self.isInLowPowerMode) {
-				// Only blink the Time Separator when not in Low Power Mode
+			if (self.blinkTimeSeparator && (!self.isInLowPowerMode || Globals.IS_ALWAYS_ACTIVE)) {
+				// Only blink the Time Separator when not in Low Power Mode (OR
+				// when the watch supports an Always Active watchface)
         		timeViewLabel.setText((clockTime.sec % 2) == 0 ? ":" : "");
         	} else {
         		// If the Time Separator should not blink OR we are in Low Power
@@ -250,37 +260,43 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
         var batteryLabelView = View.findDrawableById("BatteryLabel"); // Label
         var phoneConnectedView = View.findDrawableById("PhoneConnectedImageLabel");
         Sys.println(self.statusState);
+        if (self.isInLowPowerMode || self.uiUpdateNeeded) {
+    		self.updateExtraInfoVars();
+    	}
         if (self.statusState != STATUS_HIDE_ALL) {
 	        // Update the Top status bar information views
 	        if (self.statusState != STATUS_HIDE_BATTERY) {
 		        // Get the current battery percentage
-		        var batteryPercentage = Sys.getSystemStats().battery.toNumber();
+		        /*if (self.isInLowPowerMode || self.uiUpdateNeeded) {
+		        	self.batteryPercentage = Sys.getSystemStats().battery.toNumber();
+		        }*/
+		        //var batteryPercentage = Sys.getSystemStats().battery.toNumber();
 		        if (self.statusState != STATUS_HIDE_BATTERY_PERCENTAGE && self.statusState != STATUS_HIDE_BATTERY_PERCENTAGE_CONNECTION) {
 			        // Update the Battery Label view with the current percentage as an
 			        // numeric integer (no decimals)
-			        batteryLabelView.setText(Lang.format("$1$%", [batteryPercentage.format("%d")]));
+			        batteryLabelView.setText(Lang.format("$1$%", [self.batteryPercentage.format("%d")]));
 		        } else {
 		        	batteryLabelView.setText("");
 		        }
 		        // Update the Battery Level icon based on the current battery level
-		        var batteryIconValue = null; // Default Battery Icon value
+		        var batteryIconValue = self.batteryIconValue; // Default Battery Icon value
 		        batteryImageView.setColor(self.iconColor);
 		        batteryLabelView.setColor(self.iconColor);
-		        if (batteryPercentage >= 95) {
+		        if (self.batteryPercentage >= 95) {
 		        	// The battery is between 95 - 100% (full)
 		        	batteryIconValue = Rez.Strings.fa_battery;
-		        } else if (batteryPercentage >= 67) {
+		        } else if (self.batteryPercentage >= 67) {
 		        	// The battery is between 67 - 95% (above half full)
 		        	batteryIconValue = Rez.Strings.fa_battery_3;
-		        } else if (batteryPercentage > 33) {
+		        } else if (self.batteryPercentage > 33) {
 		        	// The battery is between 33 - 67% (half full)
 		        	batteryIconValue = Rez.Strings.fa_battery_2;
-		        } else if (batteryPercentage > 5) {
+		        } else if (self.batteryPercentage > 5) {
 		        	// The battery is between 5 - 33% (below half full)
 		        	batteryIconValue = Rez.Strings.fa_battery_1;
 		        } else {
 		        	// The battery is between 0 - 5% (empty)
-		        	batteryIconName = Rez.Strings.fa_battery_0;
+		        	batteryIconValue = Rez.Strings.fa_battery_0;
 		        }
 		        if (batteryIconValue != null) {
 		        	batteryImageView.setText(batteryIconValue);
@@ -364,16 +380,18 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 	    var stepsImageView = View.findDrawableById("StepsImage");
 	    var stepsImageBitmap = Rez.Drawables.RunBitmap;
         if (self.stepsState != STEPS_HIDE_ALL) {
-	        var activityInfo = ActMon.getInfo();
-	        var currentSteps = activityInfo.steps.toFloat();
-	        var stepsGoal = activityInfo.stepGoal.toFloat();
+        	/*if (self.isInLowPowerMode || self.uiUpdateNeeded) {
+	        	var activityInfo = ActMon.getInfo();
+	        	self.currentSteps = activityInfo.steps.toFloat();
+	        	self.stepsGoal = activityInfo.stepGoal.toFloat();
+	        }*/
 	        var stepsFromGoalPercentage = 0;
 	        var stepsText = "";
 	        if (self.stepsState != STEPS_HIDE_CURRENT) {
-	        	stepsText = activityInfo.steps.format("%d");
+	        	stepsText = self.currentSteps.format("%d");
 	        }
 	        if (self.stepsState != STEPS_HIDE_GOAL_PROGRESS) {
-	        	stepsFromGoalPercentage = (currentSteps / stepsGoal)* 100.0f;
+	        	stepsFromGoalPercentage = (self.currentSteps / self.stepsGoal)* 100.0f;
 	        }
 	        /*var stepsText = Lang.format(stepsLabelStringRes, [
 	        	currentSteps.format("%d"), stepsFromGoalPercentage.format("%d")
@@ -383,7 +401,7 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 	        stepsView.setText(stepsText);
 	        //stepsView.setText(stepsText);
 	        // Check if the current steps are equal or greater than the step goal
-	        if (activityInfo.steps >= activityInfo.stepGoal) {
+	        if (self.currentSteps >= self.stepsGoal) {
 	        	// We have reached the Step Goal for today! Change the color to show
 	        	// this!
 	        	stepsView.setColor(getInfoTextColor([Gfx.COLOR_DK_GREEN, Gfx.COLOR_GREEN]));
@@ -424,6 +442,21 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 	    self.statusState = App.getApp().getProperty("StatusVisibility");
 	    self.stepsState = App.getApp().getProperty("StepsVisibility");
 	    self.notifyAlarmState = App.getApp().getProperty("NotifyAlarmVisibility");
+    }
+
+    function updateExtraInfoVars() {
+    	if (self.statusState != STATUS_HIDE_ALL) {
+	        if (self.statusState != STATUS_HIDE_BATTERY) {
+		        // Get the current battery percentage
+	        	self.batteryPercentage = Sys.getSystemStats().battery.toNumber();
+	        }
+
+	        if (self.stepsState != STEPS_HIDE_ALL) {
+	        	var activityInfo = ActMon.getInfo();
+	        	self.currentSteps = activityInfo.steps.toFloat();
+	        	self.stepsGoal = activityInfo.stepGoal.toFloat();
+	        }
+        }
     }
 
     function getInfoTextColor(colors) {

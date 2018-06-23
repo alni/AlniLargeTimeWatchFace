@@ -1,2 +1,9 @@
 project.manifest = manifest.xml
 
+# fix autobuild to be a specific device
+base.sourcePath=$(fr230.sourcePath)
+
+# define+ the actual sourcePaths
+vivoactive3.sourcePath=source;source-always_active
+# TODO: Add for other devices supporting Always Active Display
+fr230.sourcePath=source;source-non_aa
