@@ -3,6 +3,28 @@ project.manifest = manifest.xml
 # fix autobuild to be a specific device
 base.sourcePath=$(fr230.sourcePath)
 
+# Resource Paths:
+# Layouts:
+fr235.resourcePath = $(fr235.resourcePath);resources-fr230
+epix.resourcePath = $(epix.resourcePath);resources-vivoactive
+# 16 Colors
+fenix3.resourcePath = $(fenix3.resourcePath);resources-16color
+fenix3_hr.resourcePath = $(fenix3_hr.resourcePath);resources-16color
+d2bravo.resourcePath = $(d2bravo.resourcePath);resources-16color
+d2bravo_titanium.resourcePath = $(d2bravo_titanium.resourcePath);resources-16color
+fr230.resourcePath = $(fr230.resourcePath);resources-16color
+fr235.resourcePath = $(fr235.resourcePath);resources-16color
+fr630.resourcePath = $(fr630.resourcePath);resources-16color
+fr735xt.resourcePath = $(fr735xt.resourcePath);resources-16color
+fr920xt.resourcePath = $(fr920xt.resourcePath);resources-16color
+
+# 64 Colors
+epix.resourcePath = $(epix.resourcePath);resources-64color
+fenixchronos.resourcePath = $(fenixchronos.resourcePath);resources-64color
+vivoactive.resourcePath = $(vivoactive.resourcePath);resources-64color
+vivoactive_hr.resourcePath = $(vivoactive_hr.resourcePath);resources-64color
+vivoactive3.resourcePath = $(vivoactive3.resourcePath);resources-64color
+
 # define+ the actual sourcePaths
 vivoactive3.sourcePath=source;source-always_active
 vivoactive5.sourcePath=source;source-always_active
