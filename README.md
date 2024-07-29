@@ -25,6 +25,8 @@ A Watch Face for Garmin Connect IQ devices.
 * Forerunner® 920XT
 * vívoactive
 * vívoactive HR
+* vívoactive 3
+* vívoactive 5
 
 
 ### Supported languages ###
