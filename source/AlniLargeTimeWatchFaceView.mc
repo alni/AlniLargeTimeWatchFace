@@ -135,6 +135,11 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
     	Ui.requestUpdate();
     }
 
+	function onDisplayModeChanged() {
+		self.uiUpdateNeeded = true;
+    	Ui.requestUpdate();
+	}
+
     function updateTime(deviceSettings) {
     	// Get the current time and format it correctly
         var timeFormat = "$1$:$2$";
