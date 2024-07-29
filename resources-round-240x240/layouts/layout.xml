@@ -27,8 +27,12 @@
     <label id="TimeLabel" x="center" y="center" font="@Fonts.TimeFontDSEG" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
 
     <!-- Date section below clock -->
+    <!--
     <label id="TimeHourLabel" x="105" y="center" text="12" font="@Fonts.TimeFontDSEG" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
     <label id="TimeMinuteLabel" x="135" y="center" text="50" font="@Fonts.TimeFontDSEG" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+    -->
+    <label id="TimeHourLabel" x="105" y="center" text="12" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+    <label id="TimeMinuteLabel" x="135" y="center" text="50" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
 <!--     <label id="Time2HourLabel" x="109" y="center" text="12" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_YELLOW" /> -->
 <!--     <label id="Time2MinuteLabel" x="135" y="center" text="46" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_YELLOW" /> -->
 <!--     <label id="Time2Label" x="center" y="center" text=":" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" /> -->

@@ -149,9 +149,9 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
         }
         // Update the AM/PM labels
         // The first character label of "am/pm" ("a/p").
-        var timeAmPmLabel = View.findDrawableById("TimeAmPmLabel");
+        var timeAmPmLabel = View.findDrawableById("TimeAmPmLabel") as Ui.Text;
         // The last character label of "am/pm" ("m").
-        var timeAmPmMLabel = View.findDrawableById("TimeAmPmMLabel");
+        var timeAmPmMLabel = View.findDrawableById("TimeAmPmMLabel") as Ui.Text;
         if (!deviceSettings.is24Hour) {
         	// We should display a 12-hour clock
         	// Set the AM/PM labels to the current secondary text colour
@@ -197,9 +197,9 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
         }
         var timeString = Lang.format(timeFormat, [hours, minutes]);
         // Update the Time views
-        var timeViewLabel = View.findDrawableById("TimeLabel");
-        var timeHourView = View.findDrawableById("TimeHourLabel");
-        var timeMinuteView = View.findDrawableById("TimeMinuteLabel");
+        var timeViewLabel = View.findDrawableById("TimeLabel") as Ui.Text;
+        var timeHourView = View.findDrawableById("TimeHourLabel") as Ui.Text;
+        var timeMinuteView = View.findDrawableById("TimeMinuteLabel") as Ui.Text;
         timeViewLabel.setColor(foregroundColor);
         Sys.println(self.useMilitaryFormat);
 		if (!self.useMilitaryFormat) {
@@ -238,9 +238,9 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
         var today = DateTime.today(); // Get todays date
         // Use short (numeric) format for the todays info
 	    var todayInfo = Gregorian.info(today, DateTime.FORMAT_SHORT);
-	    var weekDayView = View.findDrawableById("WeekDayLabel"); // Weekday view
-	    var dateView = View.findDrawableById("DateLabel"); // Day of Month view
-	    var monthView = View.findDrawableById("MonthLabel"); // Month name view
+	    var weekDayView = View.findDrawableById("WeekDayLabel") as Ui.Text; // Weekday view
+	    var dateView = View.findDrawableById("DateLabel") as Ui.Text; // Day of Month view
+	    var monthView = View.findDrawableById("MonthLabel") as Ui.Text; // Month name view
 
 	    weekDayView.setColor(self.secondaryFgColor);
 	    monthView.setColor(self.secondaryFgColor);
@@ -258,9 +258,9 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 
 
         //var batteryImageView = View.findDrawableById("BatteryImage"); // Icon
-        var batteryImageView = View.findDrawableById("BatteryImageLabel"); // Icon
-        var batteryLabelView = View.findDrawableById("BatteryLabel"); // Label
-        var phoneConnectedView = View.findDrawableById("PhoneConnectedImageLabel");
+        var batteryImageView = View.findDrawableById("BatteryImageLabel") as Ui.Text; // Icon
+        var batteryLabelView = View.findDrawableById("BatteryLabel") as Ui.Text; // Label
+        var phoneConnectedView = View.findDrawableById("PhoneConnectedImageLabel") as Ui.Text;
         Sys.println(self.statusState);
         if (self.isInLowPowerMode || self.uiUpdateNeeded) {
     		self.updateExtraInfoVars();
@@ -329,10 +329,10 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 
 
         // Update the bottom information status region
-        var notificationImageView = View.findDrawableById("NotificationImageLabel");
-        var notificationView = View.findDrawableById("NotificationLabel");
-        var alarmImageView = View.findDrawableById("AlarmImageLabel");
-        var alarmView = View.findDrawableById("AlarmLabel");
+        var notificationImageView = View.findDrawableById("NotificationImageLabel") as Ui.Text;
+        var notificationView = View.findDrawableById("NotificationLabel") as Ui.Text;
+        var alarmImageView = View.findDrawableById("AlarmImageLabel") as Ui.Text;
+        var alarmView = View.findDrawableById("AlarmLabel") as Ui.Text;
         if (self.notifyAlarmState != NOTIFY_ALARM_HIDE_ALL) {
 	        var notificationCount = deviceSettings.notificationCount;
 	        var alarmCount = deviceSettings.alarmCount;
@@ -377,9 +377,9 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 
 
         // Activity Information
-        var stepsView = View.findDrawableById("StepsLabel");
-	    var stepsGoalView = View.findDrawableById("StepsGoal");
-	    var stepsImageView = View.findDrawableById("StepsImage");
+        var stepsView = View.findDrawableById("StepsLabel") as Ui.Text;
+	    var stepsGoalView = View.findDrawableById("StepsGoal") as ProgressBar;
+	    var stepsImageView = View.findDrawableById("StepsImage") as Ui.Bitmap;
 	    var stepsImageBitmap = Rez.Drawables.RunBitmap;
         if (self.stepsState != STEPS_HIDE_ALL) {
         	/*if (self.isInLowPowerMode || self.uiUpdateNeeded) {
