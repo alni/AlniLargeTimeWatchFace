@@ -3,9 +3,9 @@
 
     <!-- Status/Top section -->
     <!-- Left-hand status icons -->
-    <label id="BatteryImageLabel" text="@Strings.fa_battery_2" font="@Fonts.FontAwesome" x="53" y="23" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="BatteryImageLabel" text="@Strings.ic_battery_2" font="@Fonts.MaterialDesign" x="53" y="19" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
     <label id="BatteryLabel" x="82" y="20" text="100%" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GRAY" />
-    <label id="PhoneConnectedImageLabel" text="@Strings.fa_bluetooth_b" font="@Fonts.FontAwesome" x="187" y="23" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="PhoneConnectedImageLabel" text="@Strings.ic_bluetooth_b" font="@Fonts.MaterialDesign" x="187" y="21" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GREEN" />
 
     <!-- Right-hand activity monitoring -->
     <label id="StepsLabel" x="190" y="52" text="1000" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
@@ -45,8 +45,8 @@
     <label id="MonthLabel" x="140" y="157" text="Des" font="Gfx.FONT_SMALL" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
 
     <!-- Bottom section -->
-    <label id="NotificationImageLabel" text="@Strings.fa_comment_o" font="@Fonts.FontAwesome" x="63" y="200" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
-    <label id="NotificationLabel" x="85" y="200" text="17" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GRAY" />
-    <label id="AlarmImageLabel" text="@Strings.fa_bell_o" font="@Fonts.FontAwesome" x="177" y="202" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GREEN" />
-    <label id="AlarmLabel" x="155" y="200" text="2" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GRAY" />
+    <label id="NotificationImageLabel" text="@Strings.ic_chat_bubble" font="@Fonts.MaterialDesign" x="70" y="200" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="NotificationLabel" x="93" y="200" text="17" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_DK_GRAY" />
+    <label id="AlarmImageLabel" text="@Strings.ic_alarm" font="@Fonts.MaterialDesign" x="170" y="202" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GREEN" />
+    <label id="AlarmLabel" x="147" y="200" text="2" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GRAY" />
 </layout>

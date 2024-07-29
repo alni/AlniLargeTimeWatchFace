@@ -291,19 +291,19 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 		        batteryLabelView.setColor(self.iconColor);
 		        if (self.batteryPercentage >= 95) {
 		        	// The battery is between 95 - 100% (full)
-		        	batteryIconValue = Rez.Strings.fa_battery;
+		        	batteryIconValue = Rez.Strings.ic_battery;
 		        } else if (self.batteryPercentage >= 67) {
 		        	// The battery is between 67 - 95% (above half full)
-		        	batteryIconValue = Rez.Strings.fa_battery_3;
+		        	batteryIconValue = Rez.Strings.ic_battery_3;
 		        } else if (self.batteryPercentage > 33) {
 		        	// The battery is between 33 - 67% (half full)
-		        	batteryIconValue = Rez.Strings.fa_battery_2;
+		        	batteryIconValue = Rez.Strings.ic_battery_2;
 		        } else if (self.batteryPercentage > 5) {
 		        	// The battery is between 5 - 33% (below half full)
-		        	batteryIconValue = Rez.Strings.fa_battery_1;
+		        	batteryIconValue = Rez.Strings.ic_battery_1;
 		        } else {
 		        	// The battery is between 0 - 5% (empty)
-		        	batteryIconValue = Rez.Strings.fa_battery_0;
+		        	batteryIconValue = Rez.Strings.ic_battery_0;
 		        }
 		        if (batteryIconValue != null) {
 		        	batteryImageView.setText(batteryIconValue);
@@ -315,7 +315,7 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 
 			if (self.statusState != STATUS_HIDE_CONNECTION && self.statusState != STATUS_HIDE_BATTERY_PERCENTAGE_CONNECTION) {
 		        // Update the Phone Connected Icon view
-		        phoneConnectedView.setText(Rez.Strings.fa_bluetooth_b);
+		        phoneConnectedView.setText(Rez.Strings.ic_bluetooth_b);
 		        if (deviceSettings.phoneConnected) {
 		        	// Phone connected! Show the Bluetooth ON Icon
 		        	phoneConnectedView.setColor(getInfoTextColor([Gfx.COLOR_DK_BLUE, Gfx.COLOR_BLUE]));
@@ -343,7 +343,7 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 	        var alarmCount = deviceSettings.alarmCount;
 
 			if (self.notifyAlarmState != NOTIFY_ALARM_HIDE_NOTIFY) {
-				notificationImageView.setText(Rez.Strings.fa_comment_o);
+				notificationImageView.setText(Rez.Strings.ic_chat_bubble);
 				notificationImageView.setColor(self.iconColor);
 		        notificationView.setColor(self.iconColor);
 		        if (notificationCount > 0) {
@@ -359,7 +359,7 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 	        }
 
 	        if (self.notifyAlarmState != NOTIFY_ALARM_HIDE_ALARM) {
-	        	alarmImageView.setText(Rez.Strings.fa_bell_o);
+	        	alarmImageView.setText(Rez.Strings.ic_alarm);
 				alarmImageView.setColor(self.iconColor);
 	    		alarmView.setColor(self.iconColor);
 		        if (alarmCount > 0) {

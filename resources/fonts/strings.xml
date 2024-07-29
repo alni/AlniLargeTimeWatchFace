@@ -8,5 +8,16 @@
     <string id="fa_battery_2">\uf242</string>
     <string id="fa_battery_3">\uf241</string>
     <string id="fa_bluetooth_b">\uf294</string>
-    
+
+    <string id="ic_chat_bubble">\ue0ca</string>
+    <string id="ic_alarm">\ue855</string>
+    <string id="ic_battery">\uf13b</string>
+    <string id="ic_battery_0">\uf8ae</string>
+    <string id="ic_battery_1">\uf155</string>
+    <string id="ic_battery_2">\uf8af</string>
+    <string id="ic_battery_3">\uf8b0</string>
+    <string id="ic_bluetooth_b">\ue1a7</string>
+
+    <string id="ic_directions_run">\ue566</string>
+    <string id="ic_directions_walk">\ue536</string>
 </strings>
