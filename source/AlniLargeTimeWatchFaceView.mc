@@ -201,6 +201,7 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
         var timeHourView = View.findDrawableById("TimeHourLabel");
         var timeMinuteView = View.findDrawableById("TimeMinuteLabel");
         timeViewLabel.setColor(foregroundColor);
+        Sys.println(self.useMilitaryFormat);
 		if (!self.useMilitaryFormat) {
 			// If not using Military Format then separate the hours and minutes
 			// into two labels and use the default Time Label as Time Separator
@@ -227,6 +228,7 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 			timeMinuteView.setText(""); // Hide the minutes label
 			// Set the default time label to the time string contaning both the
 			// hours and the minutes (0945)
+			timeString = Lang.format("$1$$2$", [hours, minutes]);
 	        timeViewLabel.setText(timeString);
         }
     }
@@ -434,6 +436,7 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
     	self.backgroundColor = App.getApp().getProperty("BackgroundColor");
 	    self.foregroundColor = App.getApp().getProperty("ForegroundColor");
 	    self.secondaryFgColor = App.getApp().getProperty("SecondaryForegroundColor");
+	    Sys.println(App.getApp().getProperty("UseMilitaryFormat"));
 	    self.useMilitaryFormat = App.getApp().getProperty("UseMilitaryFormat");
 	    self.blinkTimeSeparator = App.getApp().getProperty("BlinkTimeSeparator");
 

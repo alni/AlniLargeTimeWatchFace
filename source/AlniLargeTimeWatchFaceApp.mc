@@ -49,8 +49,8 @@ class AlniLargeTimeWatchFaceApp extends App.AppBase {
 	        //indicates there was an error, and “data” is the error code
 	    } else {
 	        //got good “data”
-	        weatherData = data;
-	        App.getApp().setProperty(WEATHER_KEY, weatherData);
+	        //weatherData = data;
+	        //App.getApp().setProperty(WEATHER_KEY, weatherData);
 	        Ui.requestUpdate();
 	    }
 	}

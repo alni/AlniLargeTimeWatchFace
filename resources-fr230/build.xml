@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build>
+  <exclude file="DarkSkyServiceDelegate.mc"/>
+<!--   <exclude dir="source-excluded" /> -->
+<!--   <exclude annotation="roundImpl"/> -->
+</build>
