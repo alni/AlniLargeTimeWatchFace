@@ -438,18 +438,18 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 
 
     function updateVariables() {
-    	self.backgroundColor = App.getApp().getProperty("BackgroundColor");
-	    self.foregroundColor = App.getApp().getProperty("ForegroundColor");
-	    self.secondaryFgColor = App.getApp().getProperty("SecondaryForegroundColor");
-	    Sys.println(App.getApp().getProperty("UseMilitaryFormat"));
-	    self.useMilitaryFormat = App.getApp().getProperty("UseMilitaryFormat");
-	    self.blinkTimeSeparator = App.getApp().getProperty("BlinkTimeSeparator");
+		self.backgroundColor = App.Properties.getValue("BackgroundColor");
+		self.foregroundColor = App.Properties.getValue("ForegroundColor");
+	    self.secondaryFgColor = App.Properties.getValue("SecondaryForegroundColor");
+	    Sys.println(App.Properties.getValue("UseMilitaryFormat"));
+	    self.useMilitaryFormat = App.Properties.getValue("UseMilitaryFormat");
+	    self.blinkTimeSeparator = App.Properties.getValue("BlinkTimeSeparator");
 
 	    self.iconColor = getInfoTextColor(null);
 
-	    self.statusState = App.getApp().getProperty("StatusVisibility");
-	    self.stepsState = App.getApp().getProperty("StepsVisibility");
-	    self.notifyAlarmState = App.getApp().getProperty("NotifyAlarmVisibility");
+	    self.statusState = App.Properties.getValue("StatusVisibility");
+	    self.stepsState = App.Properties.getValue("StepsVisibility");
+	    self.notifyAlarmState = App.Properties.getValue("NotifyAlarmVisibility");
     }
 
     function updateExtraInfoVars() {
@@ -468,9 +468,10 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
     }
 
     function getInfoTextColor(colors) {
-    	if (colors == null) {
+    	if (colors == null or !(colors instanceof Toybox.Lang.Array)) {
     		colors = [Gfx.COLOR_DK_GRAY, Gfx.COLOR_LT_GRAY];
     	}
+		colors = colors as Toybox.Lang.Array;
     	if (self.backgroundColor >= Gfx.COLOR_LT_GRAY) {
     		return colors[0];
     	} else {
