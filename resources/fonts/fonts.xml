@@ -6,5 +6,6 @@
 	<font id="MaterialDesignLarge" filename="material-design-icons_42px.fnt" antialias="true" />
 	<!-- Only include digits from this large font -->
 	<font id="TimeFont" filename="Teko.fnt" filter="0123456789:"/>
+	<font id="TimeFontLarge" filename="Teko_Large.fnt" filter="0123456789:"/>
 	<font id="TimeFontDSEG" filename="DSEG7ModernMini.fnt" filter="0123456789:"/>
 </resources>

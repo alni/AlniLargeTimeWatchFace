@@ -8,14 +8,14 @@
     <label id="PhoneConnectedImageLabel" text="@Strings.ic_bluetooth_b" font="@Fonts.MaterialDesignLarge" x="294" y="30" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GREEN" />
 
     <!-- Right-hand activity monitoring -->
-    <label id="StepsLabel" x="309" y="85" text="1000" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
-    <label id="StepsImageLabel" text="@Strings.ic_directions_run" font="@Fonts.MaterialDesignLarge" x="355" y="85" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GRAY" />
+    <label id="StepsLabel" x="309" y="80" text="1000" font="Gfx.FONT_TINY" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+    <label id="StepsImageLabel" text="@Strings.ic_directions_run" font="@Fonts.MaterialDesignLarge" x="355" y="78" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_DK_GRAY" />
     <!--
     <bitmap id="StepsImage" filename="../drawables/ic_directions_run_24px.png" x="325" y="98" />
     -->
     <drawable id="StepsGoal" class="ProgressBar">
 		<param name="locX">20</param> <!-- X edge at this Y (53) -->
-		<param name="locY">130</param>
+		<param name="locY">120</param>
 		<param name="height">2</param>
 		<param name="width">350</param>
 		<param name="color">Gfx.COLOR_LT_GRAY</param>
@@ -27,7 +27,7 @@
     <label id="TimeAmPmLabel" x="364" y="163" text="p" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
     <label id="TimeAmPmMLabel" x="366" y="195" text="m" font="Gfx.FONT_XTINY" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
 
-    <label id="TimeLabel" x="center" y="center" font="@Fonts.TimeFontDSEG" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
+    <label id="TimeLabel" x="center" y="center" font="@Fonts.TimeFontLarge" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" />
 
     <!-- Date section below clock -->
     
@@ -35,8 +35,8 @@
     <label id="TimeHourLabel" x="170" y="center" text="12" font="@Fonts.TimeFontDSEG" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
     <label id="TimeMinuteLabel" x="220" y="center" text="50" font="@Fonts.TimeFontDSEG" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
     -->
-    <label id="TimeHourLabel" x="170" y="center" text="12" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
-    <label id="TimeMinuteLabel" x="220" y="center" text="50" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
+    <label id="TimeHourLabel" x="170" y="center" text="12" font="@Fonts.TimeFontLarge" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_BLUE" />
+    <label id="TimeMinuteLabel" x="220" y="center" text="50" font="@Fonts.TimeFontLarge" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_BLUE" />
 <!--     <label id="Time2HourLabel" x="109" y="center" text="12" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_YELLOW" /> -->
 <!--     <label id="Time2MinuteLabel" x="135" y="center" text="46" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_YELLOW" /> -->
 <!--     <label id="Time2Label" x="center" y="center" text=":" font="@Fonts.TimeFont" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_BLUE" /> -->
