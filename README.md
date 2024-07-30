@@ -65,4 +65,4 @@ Used the [Moment.js](http://momentjs.com/) JavaScript library as base with the w
 ### Icons ###
 
 * Icons with `fa-` prefix based on the [Font Awesome](http://fontawesome.io/) project.
-* Icons with `ic_` prefix based on the [Material Design Icons](https://fonts.google.com/icons?icon.set=Material+Symbols) project.
+* Icons with `ic_` prefix based on the [Google Material Design Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols) project.
