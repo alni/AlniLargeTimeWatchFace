@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 	<font id="FontAwesome" filename="font-awesome.fnt" antialias="true" />
-	<font id="MaterialDesign" filename="material-design-icons_24px.fnt" antialias="true" />
+	<font id="MaterialDesigSmall" filename="material-design-icons_24px.fnt" antialias="true" />
+	<font id="MaterialDesign" filename="material-design-icons_28px.fnt" antialias="true" />
 	<font id="MaterialDesignLarge" filename="material-design-icons_42px.fnt" antialias="true" />
 	<!-- Only include digits from this large font -->
 	<font id="TimeFont" filename="Teko.fnt" filter="0123456789:"/>
