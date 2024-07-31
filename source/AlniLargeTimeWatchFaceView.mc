@@ -95,6 +95,8 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 		var deviceSettings = Sys.getDeviceSettings();
 		self.updateTime(deviceSettings);
 		self.updateExtraInfo(deviceSettings);
+
+		self.updateBgDrawable();
     }
 
     // Update the view
@@ -103,8 +105,11 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
 	    	self.updateVariables();
 	    	self.updateExtraInfoVars();
 
+			self.uiUpdateNeeded = true;
+
 	    	AlniLargeTimeWatchFaceApp.resetSettingsChanged();
     	}
+		self.updateBgDrawable();
     	var deviceSettings = Sys.getDeviceSettings();
 
 		// Update the time information
@@ -130,6 +135,8 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
     function onExitSleep() {
     	self.isInLowPowerMode = false;
     	self.uiUpdateNeeded = true;
+		self.updateVariables();
+		self.updateBgDrawable();
     	Ui.requestUpdate();
     }
 
@@ -137,12 +144,25 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
     function onEnterSleep() {
     	self.isInLowPowerMode = true;
     	self.uiUpdateNeeded = true;
+		self.updateVariables();
+		self.updateBgDrawable();
     	Ui.requestUpdate();
     }
 
 	function onDisplayModeChanged() {
 		self.uiUpdateNeeded = true;
     	Ui.requestUpdate();
+	}
+
+	function updateBgDrawable() {
+		var bgDrawable = View.findDrawableById("Background") as Background;
+
+		if (bgDrawable == null) {
+			return;
+		}
+
+		var bgColor = self.isInLowPowerMode ? Gfx.COLOR_BLACK : self.backgroundColor;
+		bgDrawable.setBgColor(bgColor);
 	}
 
     function updateTime(deviceSettings) {
