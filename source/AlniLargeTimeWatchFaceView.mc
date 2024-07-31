@@ -90,6 +90,11 @@ class AlniLargeTimeWatchFaceView extends Ui.WatchFace {
     function onShow() {
     	self.updateVariables();
     	self.updateExtraInfoVars();
+
+		// Update Time and Extra Info data and colors on show
+		var deviceSettings = Sys.getDeviceSettings();
+		self.updateTime(deviceSettings);
+		self.updateExtraInfo(deviceSettings);
     }
 
     // Update the view
