@@ -26,7 +26,9 @@ vivoactive_hr.resourcePath = $(vivoactive_hr.resourcePath);resources-64color
 vivoactive3.resourcePath = $(vivoactive3.resourcePath);resources-64color
 
 # define+ the actual sourcePaths
+# Always Active only supported on MIP displays (not LCD/OLED)
 vivoactive3.sourcePath=source;source-always_active
-vivoactive5.sourcePath=source;source-always_active
 # TODO: Add for other devices supporting Always Active Display
 fr230.sourcePath=source;source-non_aa
+vivoactive5.sourcePath=source;source-non_aa
+# LCD/OLED displays may support Always *ON* (low power) instead (not the same as Always *Active*)
