@@ -16,6 +16,25 @@
             <listEntry value="0x550000">@Strings.ColorDarkRed</listEntry>
             <listEntry value="0xFFAA00">@Strings.ColorYellow</listEntry>
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+
+            <!-- Extended Colors -->
+            <!-- X11 -->
+            <listEntry value="0x0000FF">X11 Blue</listEntry>
+            <listEntry value="0x00FFFF">X11 Cyan</listEntry>
+            <listEntry value="0x006400">X11 Dark Green</listEntry>
+            <listEntry value="0x696969">X11 Dim Gray</listEntry>
+            <listEntry value="0xFFD700">X11 Gold</listEntry>
+            <listEntry value="0x808080">X11 Web Gray</listEntry>
+            <listEntry value="0x008000">X11 Web Green</listEntry>
+            <listEntry value="0xD3D3D3">X11 Light Gray</listEntry>
+            <listEntry value="0x778899">X11 Light Slate Gray</listEntry>
+            <listEntry value="0x800000">X11 Web Maroon</listEntry>
+            <listEntry value="0x000080">X11 Navy Blue</listEntry>
+            <listEntry value="0x808000">X11 Olive</listEntry>
+            <listEntry value="0x800080">X11 Web Purple</listEntry>
+            <listEntry value="0x663399">X11 Rebecca Purple</listEntry>
+            <listEntry value="0xC0C0C0">X11 Silver</listEntry>
+            <listEntry value="0xFFFF00">X11 Yellow</listEntry>
         </settingConfig>
     </setting>
     
@@ -35,6 +54,25 @@
             <listEntry value="0x550000">@Strings.ColorDarkRed</listEntry>
             <listEntry value="0xFFAA00">@Strings.ColorYellow</listEntry>
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+
+            <!-- Extended Colors -->
+            <!-- X11 -->
+            <listEntry value="0x0000FF">X11 Blue</listEntry>
+            <listEntry value="0x00FFFF">X11 Cyan</listEntry>
+            <listEntry value="0x006400">X11 Dark Green</listEntry>
+            <listEntry value="0x696969">X11 Dim Gray</listEntry>
+            <listEntry value="0xFFD700">X11 Gold</listEntry>
+            <listEntry value="0x808080">X11 Web Gray</listEntry>
+            <listEntry value="0x008000">X11 Web Green</listEntry>
+            <listEntry value="0xD3D3D3">X11 Light Gray</listEntry>
+            <listEntry value="0x778899">X11 Light Slate Gray</listEntry>
+            <listEntry value="0x800000">X11 Web Maroon</listEntry>
+            <listEntry value="0x000080">X11 Navy Blue</listEntry>
+            <listEntry value="0x808000">X11 Olive</listEntry>
+            <listEntry value="0x800080">X11 Web Purple</listEntry>
+            <listEntry value="0x663399">X11 Rebecca Purple</listEntry>
+            <listEntry value="0xC0C0C0">X11 Silver</listEntry>
+            <listEntry value="0xFFFF00">X11 Yellow</listEntry>
         </settingConfig>
     </setting>
     
@@ -54,6 +92,25 @@
             <listEntry value="0x550000">@Strings.ColorDarkRed</listEntry>
             <listEntry value="0xFFAA00">@Strings.ColorYellow</listEntry>
             <listEntry value="0xFFFFFF">@Strings.ColorWhite</listEntry>
+
+            <!-- Extended Colors -->
+            <!-- X11 -->
+            <listEntry value="0x0000FF">X11 Blue</listEntry>
+            <listEntry value="0x00FFFF">X11 Cyan</listEntry>
+            <listEntry value="0x006400">X11 Dark Green</listEntry>
+            <listEntry value="0x696969">X11 Dim Gray</listEntry>
+            <listEntry value="0xFFD700">X11 Gold</listEntry>
+            <listEntry value="0x808080">X11 Web Gray</listEntry>
+            <listEntry value="0x008000">X11 Web Green</listEntry>
+            <listEntry value="0xD3D3D3">X11 Light Gray</listEntry>
+            <listEntry value="0x778899">X11 Light Slate Gray</listEntry>
+            <listEntry value="0x800000">X11 Web Maroon</listEntry>
+            <listEntry value="0x000080">X11 Navy Blue</listEntry>
+            <listEntry value="0x808000">X11 Olive</listEntry>
+            <listEntry value="0x800080">X11 Web Purple</listEntry>
+            <listEntry value="0x663399">X11 Rebecca Purple</listEntry>
+            <listEntry value="0xC0C0C0">X11 Silver</listEntry>
+            <listEntry value="0xFFFF00">X11 Yellow</listEntry>
         </settingConfig>
     </setting>
 
